@@ -1,0 +1,4 @@
+[submodule "lib/TeensyStep"]
+	path = lib/TeensyStep
+	url = https://github.com/luni64/TeensyStep.git
+	branch = master

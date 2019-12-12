@@ -1,7 +1,14 @@
 #include <Arduino.h>
+#include "locomotion.h"
+
+Locomotion locomotion;
 
 void setup() {
-  // put your setup code here, to run once:
+    pinMode(BTN, INPUT_PULLUP);
+    pinMode(LED_BUILTIN, OUTPUT);
+    while(digitalReadFast(BTN));
+    digitalWriteFast(LED_BUILTIN, HIGH);
+
 }
 
 void loop() {

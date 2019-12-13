@@ -16,6 +16,9 @@ public:
 	// Initialize Locomotion
 	Locomotion();
 
+	// Set motor speeds
+	void setSpeeds(float speed1, float speed2, float speed3);
+
 private:
 	Stepper _stepper1, _stepper2, _stepper3;
 	RotateControl _controller1, _controller2, _controller3;

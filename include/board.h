@@ -1,6 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include <Arduino.h>
+
 // Hardware Serial port 1, connected to ESP01
 #define RX1 0
 #define TX1 1
@@ -20,5 +22,7 @@
 #define DIR3 2
 #define STEP3 3
 #define EN3 4
+
+void waitForButton();
 
 #endif

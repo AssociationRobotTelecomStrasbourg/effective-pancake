@@ -2,6 +2,9 @@
 
 Locomotion::Locomotion() : _stepper1(STEP1, DIR1), _stepper2(STEP2, DIR2), _stepper3(STEP3, DIR3), _position({0., 0., 0.}) {
 	// Turning on the driver
+	pinMode(EN1, OUTPUT);
+	pinMode(EN2, OUTPUT);
+	pinMode(EN3, OUTPUT);
 	digitalWrite(EN1, LOW);
 	digitalWrite(EN2, LOW);
 	digitalWrite(EN3, LOW);
@@ -15,9 +18,13 @@ Locomotion::Locomotion() : _stepper1(STEP1, DIR1), _stepper2(STEP2, DIR2), _step
 	_controller2.rotateAsync(_stepper2);
 	_controller3.rotateAsync(_stepper3);
 
-	_controller1.overrideSpeed(0);
-	_controller2.overrideSpeed(0);
-	_controller3.overrideSpeed(0);
+	setSpeeds(0, 0, 0);
+}
+
+void Locomotion::setSpeeds(float speed1, float speed2, float speed3) {
+	_controller1.overrideSpeed(speed1);
+	_controller2.overrideSpeed(speed2);
+	_controller3.overrideSpeed(speed3);
 }
 
 float angleModulo(float angle) {

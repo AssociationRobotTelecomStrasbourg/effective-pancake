@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
     waitForButton();
-    locomotion.setSpeeds(100, 100, 100);
+    locomotion.setRobotSpeeds(100, 100, M_PI_4);
     waitForButton();
-    locomotion.setSpeeds(0, 0, 0);
+    locomotion.setRobotSpeeds(0, 0, 0);
 }

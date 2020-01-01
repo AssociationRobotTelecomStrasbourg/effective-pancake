@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name effective-pancake-global)(type Legacy)(uri /home/yyunko/DesignPCB/effective-pancake/hardware/lib_sch/effective-pancake-global.lib)(options "")(descr ""))
+  (lib (name effective-pancake-HMI-cache)(type Legacy)(uri ${KIPRJMOD}/effective-pancake-HMI-cache.lib)(options "")(descr ""))
+)

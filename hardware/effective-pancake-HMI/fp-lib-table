@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name effective-pancake-HMI)(type KiCad)(uri /home/yyunko/DesignPCB/effective-pancake/hardware/lib_fp.pretty/effective-pancake-HMI.pretty)(options "")(descr ""))
+)

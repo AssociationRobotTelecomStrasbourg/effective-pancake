@@ -1,0 +1,15 @@
+This document describes what the procedure for testing a newly soldered lidar board should be.
+
+1 - Ensure nothing is connected to the board (no Teensy, or peripherals) before applying power.
+
+2 - Apply power and test reverse polarity protection. Check that power LED lights up and test both regulators.
+
+3 - Verify power is distributed properly to all peripherals.
+
+3 - Add Teensy board, verify it turns on properly and execute blink program. 
+
+4 - Very correct motor MOS function either using a multimeter or a pump.
+
+5 - Add Lidar and verify previously written Lidar core for Neato lidar.
+
+6 - Add ONE Neopixel to test the functions of the transceiver and use simple test code using the non blocking simpler teensy library.

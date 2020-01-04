@@ -1,0 +1,15 @@
+This document describes what the procedure for testing a newly soldered HMI board should be.
+
+1 - Ensure no component or peripheral is plugged in the board before applying power.
+
+2 - Verify proper function of reverse polarity protection, and verify power is routed properly to all designated pins.
+
+3 - Add Atmega328 in Socket, ping using avrdude and set fuses, then add blink program and blink LED1 with plateformio.
+
+4 - Verify at the same time proper reset behaviour and propper booting behaviour.
+
+4 - Verify function of all switches with multimeter, and with arduino with uart (use pololu STK500v2 in the relevant UART scope port).
+
+5 - Verify encoder functionality the same way.
+
+6 - Plug in screen and check proper screen function.

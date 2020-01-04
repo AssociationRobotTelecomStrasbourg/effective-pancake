@@ -1,0 +1,52 @@
+This document describes what the procedure for testing a newly soldered motherboard should be.
+
+1 - Ensure that TMC2660 Driver BOBs, Dynamixels regulators, or any other peripheral IS NOT plugged in the board
+
+2 - Apply 20V, BE CAREFUL ABOUT POLARITY, there is no protection on this board as it is supposed to be used in application with other protections.
+
+3 - Watch Green power LED near main 5V Recom light up.
+
+4 - Remove power and add Teensy 3.2
+
+5 - Apply power again, 3.3V power LED should light up now
+
+6 - Verify correct teensy 3.2 functions :
+	- Blink Program
+	- Verify continuity between every Teensy pin and its destination.
+	- Test current amp reading : analogRead(22); value should be close to 0. (in effect around 25mA max)
+
+6 - If everything is working in order, turn off power, and add Teensy 3.6 alone, verify it boots and blinks.
+
+7 - Verify continuity for all Teensy pins using the same method as for teensy 3.2.
+
+8 - Add Teensy 3.2, verify both work at the same time and blink, then try to send UART commands between both Teensy boards.
+
+Next step is to test individual functionalities:
+
+9 - Add in the 7.5V regulator and check 7.5V flows correctly to all outputs
+	- Test pump outputs
+	- Measure correct voltage and polarity of dynamixel connectors, ensure they have been soldered the right way around.
+
+10 - Test all 6 VL53 Output, individually first, and then test 2 or 3 combinations with readressing with only 2 sensors.
+
+11 - Test optional I2C outputs using any I2C sensor on hand (VLX53 included).
+
+12 - Individually test out all line QTR inputs.
+
+13 - Test all Servo outputs individually and then test two combinations with two servos
+
+14 - Test TMC2660 drivers BOBs :
+	- Individually
+	- All three at the same time
+	- Start testing and refining movement on robot
+
+Last test is to test board interfaces :
+
+15 - First test voltage on all pins of IDC output connectors
+
+16 - If boards on hand, and tested, then try to communicate with them, otherwise, hook up the IDC socket to an arduino and do an echo test.
+
+Last functionnality is Dynamixel servo communication.
+
+17 - Try to communicate with on or more XL320 servos.
+
